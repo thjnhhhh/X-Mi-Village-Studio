@@ -10,7 +10,10 @@ header {
   padding: 0.5rem 1rem;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52e535c8ee545b82b62e20002e5a592060ae1709
 .logo-left {
   grid-column: 1;
   grid-row: 1;
@@ -22,7 +25,10 @@ header {
   display: block;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52e535c8ee545b82b62e20002e5a592060ae1709
 .logo-right {
   grid-column: 3;
   grid-row: 1;
@@ -35,18 +41,27 @@ header {
   display: block;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52e535c8ee545b82b62e20002e5a592060ae1709
 header .logo {
   grid-column: 1 / span 2;
   grid-row: 2;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52e535c8ee545b82b62e20002e5a592060ae1709
 header nav {
   grid-column: 1 / span 2;
   grid-row: 3;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52e535c8ee545b82b62e20002e5a592060ae1709
 /* ===== jobs.html ===== */
 .content {
   max-width: 60rem;
