@@ -1,0 +1,94 @@
+/* ===== jobs.html ===== */
+.content {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.how-to-apply {
+  float: right;
+  width: 25%;
+  box-sizing: border-box;
+  margin: 0 0 1rem 1.5rem;
+  padding: 1rem;
+  border: 2px solid #4b2e83;
+  border-radius: 6px;
+  background-color: #f6f2fb;
+}
+
+.job {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d9d2e6;
+}
+
+.job h2 {
+  color: #4b2e83;
+}
+
+.job-ref {
+  background-color: #eee8f7;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
+footer {
+  clear: both;
+}
+
+@media (max-width: 640px) {
+  .how-to-apply {
+    float: none;
+    width: auto;
+    margin: 0 0 1.5rem;
+  }
+}
+
+/* ===== Header (jobs.html) ===== */
+body {
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Row 1: team logo on the left */
+.logo-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.logo-left img {
+  height: 96px;
+  width: auto;
+  display: block;
+}
+
+/* Row 1: Swinburne logo on the top right */
+.logo-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.logo-right img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Row 2: site title under the team logo */
+header .logo {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* Row 3: navigation under the title */
+header nav {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
