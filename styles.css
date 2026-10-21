@@ -184,3 +184,54 @@ header nav a:hover {
                 max-width: 100%;
             }
         }
+
+.form-card {
+    background-color: #ffffff;    
+    border: 1px solid #dadce0;     
+    border-radius: 8px;          
+    padding: 24px 32px;           
+    max-width: 600px;           
+    margin: 40px auto;
+    border-left: 6px solid #d8c4aa         
+}
+
+main h2 {
+    color: #76563f;
+    border-bottom: 2px solid #d8c4aa;
+    padding-bottom: 8px;
+    text-align: center;
+
+}
+.form-card label {
+  
+  display: block; 
+  
+  
+}
+
+/* Làm ô điền dài ra */
+.form-card input {
+  
+  width: 60%; 
+  padding: 6px 8px;
+   
+}
+.form-card fieldset{
+    display: flex;
+}
+    
+.form-action {
+    margin-left: 425px;
+}
+
+    
+
+.form-card input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+   
+    
+    
+    
