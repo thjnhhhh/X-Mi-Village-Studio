@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover Xì Mi Village Studio, a creative digital agency specialising in web design and digital experiences.">
+
+    <title>Xì Mi Village Studio | Home</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    
+
+</head>
+
+<body>
+    
+
+    
+    <header id="top">
+
+        <div class="company-brand">
+            
+            <a href="index.html" class="logo">
+                <img
+                    src="./images/logo.png"
+                    alt="Xì Mi Village Studio logo"
+                    width="180"
+                    height="180"
+                >
+            </a>
+
+            <h1>Xì Mi Village Studio</h1>
+
+            
+            
+
+        </div>
+
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+  
+    <h2>Form Fields</h2>
+
+  <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+    
+    <div class="form-card">
+        <label for="Job reference number"> Job reference number *</label>
+        <input 
+            type="text" 
+            name= "Job reference number" 
+            id="Job reference number"
+            required="required"
+            placeholder="Exactly 5 alphanumeric characters"/>
+    </div>
+
+    <!-- Khung 2: Trường Email -->
+    <div class="form-card">
+      <label for="First name">First name *</label>
+      <input
+            type="text" 
+            name= "First name" 
+            id="First name"
+            placeholder="Max 20 alpha characters"
+            required="required"/>
+    </div>
+    <div class="form-card">
+      <label for="Last name">Last name *</label>
+      <input
+            type="text" 
+            name= "Last name" 
+            id="Last name"
+            placeholder="Max 20 alpha characters"
+            required="required"/>
+    </div>
+    <div class="form-card">
+      <label for="Date of birth">Date of birth *</label>
+      <input
+            type="text" 
+            name= "Date of birth" 
+            id="Date of birth"
+            placeholder="dd/mm/yyyy" 
+            pattern="\d{2}/\d{2}/\d{4}"
+            required="required"/>
+    </div>
+    <div class="form-card">
+        <fieldset>
+            <legend>Gender *</legend>
+                <label for="Male">Male</label>
+                <input 
+                    type="radio"
+                    name="Gender"
+                    value="Male"
+                    required="required"/>
+                <label for="Female">Female</label>
+                <input 
+                    type="radio"
+                    name="Gender"
+                    value="Female"
+                    required="required"/>
+                <label for="Other">Other</label>
+                <input 
+                    type="radio"
+                    name="Gender"
+                    value="Other"
+                    required="required"/>
+        </fieldset>
+    </div>
+    <div class="form-card">
+      <label for="Street Address">Street Address *</label>
+      <input
+            type="text" 
+            name= "Street Address" 
+            id="Street Address"
+            placeholder="Max 40 characters"
+            required="required"/>
+    </div>
+    <div class="form-card">
+      <label for="Suburb/Town">Suburb/Town *</label>
+      <input
+            type="text" 
+            name= "Suburb/Town" 
+            id="Suburb/Town"
+            placeholder="Max 40 characters"
+            required="required"/>
+    </div>
+    <div class="form-card">
+        <label for="State">State *</label>
+                    <select name="State"
+                            id="State"
+                            required="required">
+                        <option value="">Please Select</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>    
+    </div>
+    <div class="form-card">
+      <label for="Postcode">Postcode *</label>
+      <input
+            type="text" 
+            name= "Postcode" 
+            id="Postcode"
+            placeholder="Exactly 4 digits"
+            required="required"/>
+    </div>
+    <div class="form-card">
+      <label for="Email">Email *</label>
+      <input
+            type="text" 
+            name= "Email" 
+            id="Email"
+            placeholder="Valid format"
+            required="required"/>
+    </div>
+    <div class="form-card">
+      <label for="Phone number">Phone number *</label>
+      <input
+            type="text" 
+            name= "Phone number" 
+            id="Phone number"
+            placeholder="8–12 digits"
+            required="required"/>
+    </div>
+    <div class="form-card">
+        <label for="Skill list">Skill list *</label>
+        <hr>
+            <label for="Web Design">Web Design</label>
+            <input 
+                type="checkbox" 
+                name="things[]
+                "value="Web Design"/>
+            <label for="Branding">Branding</label>
+            <input 
+                type="checkbox"
+                name="things[]
+                 "value="Branding"/>
+            <label for="Digital content services">Digital content services</label>
+            <input 
+                type="checkbox"
+                name="things[]"
+                value="Digital content services"/>
+            <label for="Front‑end developers">Front‑end developers</label>
+            <input
+                 type="checkbox"
+                 name="things[]"
+                 value="Front‑end developers"/>
+            <label for="Designers ">Designers </label>
+            <input 
+                type="checkbox"
+                 name="things[]"
+                value="Designers "/> 
+    </div>
+    <div class="form-card">
+        <label for="Other skills">Other skills *</label>
+        <br>
+                <textarea
+                    type="text"
+                    id="Other skills"
+                    name="Other skills"
+                    placeholder="Write description of your other skills here..."
+                    rows=" 9" cols="60" 
+                ></textarea>
+    </div>
+    <div class="form-action">
+        <input type="submit" value="Submit">
+        
+        &nbsp;<input type="reset" value="Reset form">
+    </div>
+  </form>
+</main>
+
+
+    
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p><strong>Xì Mi Village Studio</strong></p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            Jira:
+            <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary">Project Board</a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-">Source Code Repository</a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:langximi@gmail.com">
+                langximi@gmail.com
+            </a>
+        </p>
+
+        <p>&copy; 2026 Xì Mi Village Studio.</p>
+
+        <p><a href="#top">Back to top</a></p>
+
+    </footer>
+
+</body>
+</html>
