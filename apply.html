@@ -21,19 +21,10 @@
             color: rgb(153, 102, 0);
         }
     </style>
-
-    
-
 </head>
-
 <body>
-    
-
-    
-    <header id="top">
-
+    <header>
         <div class="company-brand">
-            
             <a href="index.html" class="logo">
                 <img
                     src="./images/logo.png"
@@ -42,15 +33,8 @@
                     height="180"
                 >
             </a>
-
             <h1>Xì Mi Village Studio</h1>
-
-            
-            
-
         </div>
-
-        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -59,8 +43,9 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
+        
     </header>
+
     <main>
   
     <h2>Form Fields</h2>
@@ -74,10 +59,10 @@
             name= "Job reference number" 
             id="Job reference number"
             required="required"
-            placeholder="Exactly 5 alphanumeric characters"/>
+            placeholder="Exactly 5 alphanumeric characters"
+            pattern="\d{5}"/>
     </div>
 
-    <!-- Khung 2: Trường Email -->
     <div class="form-card">
       <label for="First name">First name *</label>
       <input
@@ -85,7 +70,8 @@
             name= "First name" 
             id="First name"
             placeholder="Max 20 alpha characters"
-            required="required"/>
+            required="required"
+            pattern="\d{1-20}"/>
     </div>
     <div class="form-card">
       <label for="Last name">Last name *</label>
@@ -94,7 +80,8 @@
             name= "Last name" 
             id="Last name"
             placeholder="Max 20 alpha characters"
-            required="required"/>
+            required="required"
+            pattern="\d{1-20}"/>
     </div>
     <div class="form-card">
       <label for="Date of birth">Date of birth *</label>
@@ -136,7 +123,8 @@
             name= "Street Address" 
             id="Street Address"
             placeholder="Max 40 characters"
-            required="required"/>
+            required="required"
+            pattern="\d{1-40}"/>
     </div>
     <div class="form-card">
       <label for="Suburb/Town">Suburb/Town *</label>
@@ -145,7 +133,8 @@
             name= "Suburb/Town" 
             id="Suburb/Town"
             placeholder="Max 40 characters"
-            required="required"/>
+            required="required"
+            pattern="\d{1-40}"/>
     </div>
     <div class="form-card">
         <label for="State">State *</label>
@@ -170,7 +159,8 @@
             name= "Postcode" 
             id="Postcode"
             placeholder="Exactly 4 digits"
-            required="required"/>
+            required="required"
+            pattern="\d{4}"/>
     </div>
     <div class="form-card">
       <label for="Email">Email *</label>
@@ -179,7 +169,8 @@
             name= "Email" 
             id="Email"
             placeholder="Valid format"
-            required="required"/>
+            required="required"
+            pattern="\d{6-30}"/>
     </div>
     <div class="form-card">
       <label for="Phone number">Phone number *</label>
@@ -188,7 +179,8 @@
             name= "Phone number" 
             id="Phone number"
             placeholder="8–12 digits"
-            required="required"/>
+            required="required"
+            pattern="\d{8-12}"/>
     </div>
     <div class="form-card">
         <label for="Skill list">Skill list *</label>
@@ -238,10 +230,6 @@
   </form>
 </main>
 
-
-    
-
-    <!-- Footer -->
     <footer class="site-footer">
 
         <p><strong>Xì Mi Village Studio</strong></p>
