@@ -209,7 +209,7 @@ main h2 {
   
 }
 
-/* Làm ô điền dài ra */
+
 .form-card input {
   
   width: 60%; 
@@ -221,7 +221,7 @@ main h2 {
 }
     
 .form-action {
-    margin-left: 425px;
+    margin-right: 425px;
 }
 
     
@@ -230,7 +230,23 @@ main h2 {
   width: 16px;
   height: 16px;
   margin: 0;
+  
 }
+div.form-action {
+  display: flex;
+  justify-content: center;
+     
+               
+  width: 100%;           
+   
+   
+}
+
+div.form-action input[type="submit"],
+div.form-action input[type="reset"] { 
+    padding: 12px 28px;
+}
+ 
    
     
     
