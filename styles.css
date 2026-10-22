@@ -206,7 +206,6 @@ main h2 {
     display: block;
 }
 
-
 .form-card input {
     width: 60%; 
     padding: 6px 8px;
@@ -215,20 +214,17 @@ main h2 {
      display: flex;
 }
 
-.form-action {
-     margin-right: 425px;
-}
 .form-card input[type="checkbox"] {
     width: 16px;
     height: 16px;
      margin: 0; 
 }
-div.form-action {
+.form-action {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-div.form-action input[type="submit"],
-div.form-action input[type="reset"] { 
+.form-action input[type="submit"],
+.form-action input[type="reset"] { 
     padding: 12px 28px;
-}
+} 
