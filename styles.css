@@ -184,7 +184,10 @@ header nav a:hover {
                 max-width: 100%;
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e8f0198 (just updated apply.html, jobs.html (scaffold), about.html, new images, modified styles.css)
 .form-card {
     background-color: #ffffff;    
     border: 1px solid #dadce0;     
@@ -245,9 +248,13 @@ div.form-action {
 div.form-action input[type="submit"],
 div.form-action input[type="reset"] { 
     padding: 12px 28px;
+<<<<<<< HEAD
 }
  
    
     
     
     
+=======
+}
+>>>>>>> e8f0198 (just updated apply.html, jobs.html (scaffold), about.html, new images, modified styles.css)
