@@ -186,13 +186,13 @@ header nav a:hover {
         }
 
 .form-card {
-    background-color: #ffffff;    
-    border: 1px solid #dadce0;     
-    border-radius: 8px;          
-    padding: 24px 32px;           
-    max-width: 600px;           
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px 32px;
+    max-width: 600px;
     margin: 40px auto;
-    border-left: 6px solid #d8c4aa         
+    border-left: 6px solid #d8c4aa
 }
 
 main h2 {
@@ -203,46 +203,64 @@ main h2 {
 
 }
 .form-card label {
-  
-  display: block; 
-  
-  
+    display: block;
 }
-
 
 .form-card input {
-  
-  width: 60%; 
-  padding: 6px 8px;
-   
+    width: 60%; 
+    padding: 6px 8px;
 }
 .form-card fieldset{
-    display: flex;
+     display: flex;
 }
-    
-.form-action {
-    margin-right: 425px;
-}
-
-    
 
 .form-card input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  
+    width: 16px;
+    height: 16px;
+     margin: 0; 
 }
-div.form-action {
-  display: flex;
-  justify-content: center;
-     
-               
-  width: 100%;           
-   
-   
+.form-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.form-action input[type="submit"],
+.form-action input[type="reset"] { 
+    padding: 12px 28px;
+} 
+
+.jobs-page {
+    background-color: #ffffff;
+    text-align: center;
 }
 
-div.form-action input[type="submit"],
-div.form-action input[type="reset"] { 
-    padding: 12px 28px;
+/* Center the main column */
+.jobs-page main.content {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Center the header content */
+.jobs-page header {
+    text-align: center;
+}
+
+.jobs-page .company-brand {
+    text-align: center;
+}
+
+/* Keep list items readable: the list block is centered, its text is left-aligned */
+.jobs-page main ul,
+.jobs-page main ol {
+    display: inline-block;
+    text-align: left;
+    text-align-last: left;
+    text-align: left;
+}
+
+/* Job cards stay centered as a column */
+.jobs-page .job,
+.jobs-page .how-to-apply {
+    text-align: center;
 }
