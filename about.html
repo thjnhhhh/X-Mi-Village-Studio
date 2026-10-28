@@ -3,237 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the team behind Xì Mi Village Studio and learn about our contributions, interests and project values.">
     <title>Xì Mi Village Studio | About Us</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        main p {
-            line-height: 1.8;
-            color: #444444;
-        }
-
-        th {
-            text-align: center;
-            color: rgb(153, 102, 0);
-        }
-        .career-table tbody tr:hover {
-        background-color: #f2e7d8;
-        }
-    </style>
 </head>
 <body>
-     <!-- Header -->
-    <header id="top">
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header id="top" class="site-header">
         <div class="company-brand">
-            <!-- Logo làng xì mi -->
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Xì Mi Village Studio logo" width="180" height="180">
+                <img src="images/logo.png"
+                     alt="Xì Mi Village Studio logo"
+                     width="180" height="180">
             </a>
-
             <h1>Xì Mi Village Studio</h1>
-
-            <p 
-                style="color: #8a6248;
-                font-size: 1.25rem;
-                font-style: italic;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-align: center;">
-                Small Village. Big Ideas.
-            </p>
-
-            <p style="max-width: 700px; margin: 20px auto; line-height: 1.8; text-align: center;">
-                We are a creative digital agency combining design, technology and innovation to create meaningful digital experiences for businesses and their audiences.
+            <p class="tagline">Small Village. Big Ideas.</p>
+            <p class="brand-description">
+                We combine design, technology and innovation to create
+                meaningful digital experiences for businesses and their audiences.
             </p>
         </div>
-        <!-- Navi menu -->
-        <nav>
-            <ul>
+
+        <div class="theme-control">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">Dark mode</label>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+
+    <main id="main-content" class="content">
+
         <section class="home-section">
             <h2>Group Information</h2>
-            <ul style="margin: 8px 0; padding-left: 20px; line-height: 1.8;">
-                <li style="margin-bottom: 6px;">Group Name: Xì Mi Village Studio</li>
-                <li style="margin-bottom: 6px;">Class Schedule:
-                    <ul style="margin-top: 6px; margin-bottom: 6px; padding-left: 20px; line-height: 1.8;">
-                        <li style="margin-bottom: 6px;">Day: Thursday</li>
-                        <li style="margin-bottom: 6px;">Time: 07:00 AM - 10:00 AM</li>
-                        <li style="margin-bottom: 6px;">Room: 7F - Taichung</li>
+            <ul class="group-info-list">
+                <li>Group Name: Xì Mi Village Studio</li>
+                <li>Class Schedule:
+                    <ul>
+                        <li>Day: Thursday</li>
+                        <li>Time: 07:00 AM – 10:00 AM</li>
+                        <li>Room: 7F – Taichung</li>
                     </ul>
                 </li>
             </ul>
         </section>
+
         <section class="home-section">
-            <h2>Member Contributions & Quotes</h2>
-            <dl>
+            <h2>Member Contributions &amp; Quotes</h2>
+
+            <dl class="member-list">
                 <dt>
-                    Huỳnh Đỗ Trí Vĩ 
-                    <span 
-                        style="font-family: Arial, Helvetica, sans-serif; 
-                        background-color: #f2e7d8; 
-                        color: #594332; 
-                        padding: 2px 6px; 
-                        border-radius: 4px; 
-                        border: 1px solid #d8c4aa;">
-                        ID: 102987654
-                    </span>
+                    Huỳnh Đỗ Trí Vĩ
+                    <span class="member-id">ID: 102987654</span>
                 </dt>
                 <dd>
-                    <p><strong>Primary Contribution</strong>: Developed about.html, structured group information, and integrated project sections.</p>
-                    <p><strong>Quote (First Language - Vietnamese)</strong>: "Hành trình ngàn dặm bắt đầu bằng một bước chân."</p>
-                    <p><strong>English Translation</strong>: "A journey of a thousand miles begins with a single step."</p>
+                    <p><strong>Primary Contribution:</strong> Developed about.html, structured group information and integrated project sections.</p>
+                    <p><strong>Quote (Vietnamese):</strong> "Hành trình ngàn dặm bắt đầu bằng một bước chân."</p>
+                    <p><strong>English Translation:</strong> "A journey of a thousand miles begins with a single step."</p>
                 </dd>
 
                 <dt>
                     Nguyễn Khang Thịnh
-                    <span  
-                      style="font-family: Arial, Helvetica, sans-serif; 
-                        background-color: #f2e7d8; 
-                        color: #594332; 
-                        padding: 2px 6px; 
-                        border-radius: 4px; 
-                        border: 1px solid #d8c4aa;">
-                        ID: 104567890
-                    </span>
+                    <span class="member-id">ID: 106678034</span>
                 </dt>
                 <dd>
-                    <p><strong>Primary Contribution</strong>: Designed index.html and structured the landing layout.</p>
-                    <p><strong>Quote (First Language - Vietnamese)</strong>: "Chỉ cần không dừng lại thì việc bạn tiến chậm thế nào không quan trọng."</p>
-                    <p><strong>English Translation</strong>: "It does not matter how slowly you go as long as you do not stop."</p>
+                    <p><strong>Primary Contribution:</strong> Designed index.html and structured the landing page layout.</p>
+                    <p><strong>Quote (Vietnamese):</strong> "Mến thì đến"</p>
+                    <p><strong>English Translation:</strong> "If we vibe, we vibe"</p>
                 </dd>
 
                 <dt>
-                    Ngô Gia Phú thịnh
-                    <span  
-                      style="font-family: Arial, Helvetica, sans-serif; 
-                        background-color: #f2e7d8; 
-                        color: #594332; 
-                        padding: 2px 6px; 
-                        border-radius: 4px; 
-                        border: 1px solid #d8c4aa;">
-                        ID: 101234567
-                    </span>    
+                    Ngô Gia Phú Thịnh
+                    <span class="member-id">ID: 101234567</span>
                 </dt>
                 <dd>
-                    <p><strong>Primary Contribution</strong>: Developed jobs.html and authored detailed job descriptions.</p>
-                    <p><strong>Quote (First Language - Vietnamese)</strong>: "Kiến thức là chìa khóa mở ra cánh cửa tương lai."</p>
-                    <p><strong>English Translation</strong>: "Knowledge is the key to unlocking the future."</p>
+                    <p><strong>Primary Contribution:</strong> Developed jobs.html and authored detailed job descriptions.</p>
+                    <p><strong>Quote (Vietnamese):</strong> "Kiến thức là chìa khóa mở ra cánh cửa tương lai."</p>
+                    <p><strong>English Translation:</strong> "Knowledge is the key to unlocking the future."</p>
                 </dd>
 
                 <dt>
                     Lý Bá Huy
-                    <span  
-                      style="font-family: Arial, Helvetica, sans-serif; 
-                        background-color: #f2e7d8; 
-                        color: #594332; 
-                        padding: 2px 6px; 
-                        border-radius: 4px; 
-                        border: 1px solid #d8c4aa;">
-                        ID: 102987654
-                    </span>
+                    <span class="member-id">ID: 102987654</span>
                 </dt>
                 <dd>
-                    <p><strong>Primary Contribution</strong>: Developed apply.html and configured form validation rules.</p>
-                    <p><strong>Quote (First Language - Vietnamese)</strong>: "Đừng đợi cơ hội đến, hãy tự tạo ra nó."</p>
-                    <p><strong>English Translation</strong>: "Don't wait for opportunity. Create it."</p>
+                    <p><strong>Primary Contribution:</strong> Developed apply.html and configured form validation rules.</p>
+                    <p><strong>Quote (Vietnamese):</strong> "Đừng đợi cơ hội đến, hãy tự tạo ra nó."</p>
+                    <p><strong>English Translation:</strong> "Don't wait for opportunity. Create it."</p>
                 </dd>
             </dl>
         </section>
+
         <section class="home-section">
             <h2>Group Photo</h2>
-            <figure style="text-align: center;">
-                <img class="workspace-image" src="images/team_photo.jpg" alt="Xì Mi Village Studio Team Photo" style="width: 600px !important; height: 400px !important;">
-                <figcaption style="font-size: 18px">Photo of Xì Mi Village Studio members</figcaption>
+            <figure class="team-figure">
+                <img class="team-photo"
+                     src="images/team_photo.jpg"
+                     alt="Members of Xì Mi Village Studio"
+                     width="600" height="400">
+                <figcaption>Photo of Xì Mi Village Studio members</figcaption>
             </figure>
-            </section>
+        </section>
+
         <section class="home-section">
             <h2>Team Fun Facts</h2>
-            <table class="career-table">
-                <caption style="font-size: 18px">Xì Mi Village Studio Team Fun Facts & Preferences</caption>
-                <thead>
-                    <tr>
-                        <th>Member Name</th>
-                        <th>Dream Job</th>
-                        <th>Coding Snack</th>
-                        <th>Hometown</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Huỳnh Đỗ Trí Vĩ</td>
-                        <td>AI Engineer</td>
-                        <td>Iced Coffee</td>
-                        <td>Ho Chi Minh City</td>
-                    </tr>
-                    <tr>
-                        <td>Nguyễn Khang Thịnh</td>
-                        <td>Front-End Developer</td>
-                        <td>Bánh Mì</td>
-                        <td>Ho Chi Minh City</td>
-                    </tr>
-                    <tr>
-                        <td>Ngô Gia Phú Thịnh</td>
-                        <td>UI/UX Designer</td>
-                        <td>Matcha Cookies</td>
-                        <td>Ho Chi Minh City</td>
-                    </tr>
-                    <tr>
-                        <td>Lý Bá Huy</td>
-                        <td>Backend Developer</td>
-                        <td>Almonds</td>
-                        <td>Ho Chi Minh City</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="table-wrapper">
+                <table class="career-table">
+                    <caption>Xì Mi Village Studio Team Fun Facts &amp; Preferences</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Member Name</th>
+                            <th scope="col">Dream Job</th>
+                            <th scope="col">Coding Snack</th>
+                            <th scope="col">Hometown</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Huỳnh Đỗ Trí Vĩ</td>
+                            <td>AI Engineer</td>
+                            <td>Iced Coffee</td>
+                            <td>Ho Chi Minh City</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyễn Khang Thịnh</td>
+                            <td>Sleeper</td>
+                            <td>Tea</td>
+                            <td>Ho Chi Minh City</td>
+                        </tr>
+                        <tr>
+                            <td>Ngô Gia Phú Thịnh</td>
+                            <td>Security Engineer</td>
+                            <td>Matcha Cookies</td>
+                            <td>Ho Chi Minh City</td>
+                        </tr>
+                        <tr>
+                            <td>Lý Bá Huy</td>
+                            <td>Web Developer</td>
+                            <td>Pepsi</td>
+                            <td>Ho Chi Minh City</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
+
         <section class="home-section">
-            <h2>Acknowledgements & Ethics Statement</h2>
-    
-            <p><strong>Acknowledgements:</strong> We would like to thank our teacher and classmates for their support during this project.</p>
-    
-            <p><strong>Ethics Statement:</strong> We created this website honestly, following all assignment rules and academic integrity standards.</p>
+            <h2>Acknowledgements &amp; Ethics Statement</h2>
+            <p>
+                <strong>Acknowledgements:</strong>
+                We would like to thank our teacher and classmates for
+                their support during this project.
+            </p>
+            <p>
+                <strong>Ethics Statement:</strong>
+                We created this website honestly, following the assignment
+                requirements and academic integrity standards.
+            </p>
         </section>
+
     </main>
+
     <footer class="site-footer">
-
         <p><strong>Xì Mi Village Studio</strong></p>
-
-        <nav>
-            <ul>
+        <nav aria-label="Footer navigation">
+            <ul class="footer-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
             </ul>
         </nav>
-
-        <p>
-            Jira:
-            <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary">Project Board</a>
-        </p>
-
-        <p>
-            GitHub:
-            <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-">Source Code Repository</a>
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:langximi@gmail.com">
-                langximi@gmail.com
-            </a>
-        </p>
-
+        <p>Jira: <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary" target="_blank" rel="noopener noreferrer">Project Board</a></p>
+        <p>GitHub: <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-" target="_blank" rel="noopener noreferrer">Source Code Repository</a></p>
+        <p>Email: <a href="mailto:langximi@gmail.com">langximi@gmail.com</a></p>
         <p>&copy; 2026 Xì Mi Village Studio.</p>
-
         <p><a href="#top">Back to top</a></p>
-
     </footer>
+
 </body>
 </html>
