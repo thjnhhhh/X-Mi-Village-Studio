@@ -1,23 +1,23 @@
 /*
- * Xì Mi Village Studio — Shared Stylesheet
- * Các phần chính:
+ * Xì Mi Village Studio
+ * Shared stylesheet for all four pages.
+ *
+ * Sections:
  * 1. Theme variables
- * 2. Reset và typography
- * 3. Header, logo, navigation và theme toggle
- * 4. Nội dung trang chủ và accessibility
- * 5. Search form
- * 6. Career table
- * 7. Application form
- * 8. Jobs page
- * 9. About page
- * 10. Footer
- * 11. Responsive và reduced motion*/
+ * 2. Reset and typography
+ * 3. Header and navigation
+ * 4. Main content and sections
+ * 5. Tables and images
+ * 6. Application form
+ * 7. Jobs page
+ * 8. About page
+ * 9. Footer
+ * 10. Responsive and accessibility
+ */
 
-
-/* =========================================================
+/* ========================================
    1. THEME VARIABLES
-   Màu mặc định của website là light mode.
-   ========================================================= */
+======================================== */
 
 :root {
     color-scheme: light;
@@ -34,7 +34,6 @@
     --border-color: #b9a58d;
     --accent-color: #76563f;
     --accent-hover: #594332;
-
     --link-color: #69421f;
     --focus-color: #8a4f08;
 
@@ -44,9 +43,7 @@
     --button-text: #ffffff;
 }
 
-/*
- * Dark mode được kích hoạt khi checkbox #theme-toggle
- * bên trong body được chọn.*/
+/* Dark theme is activated by the checkbox on each page. */
 body:has(#theme-toggle:checked) {
     color-scheme: dark;
 
@@ -62,7 +59,6 @@ body:has(#theme-toggle:checked) {
     --border-color: #786756;
     --accent-color: #d2a77c;
     --accent-hover: #f0d4b3;
-
     --link-color: #f0c99b;
     --focus-color: #ffcf83;
 
@@ -72,40 +68,33 @@ body:has(#theme-toggle:checked) {
     --button-text: #191714;
 }
 
+/* ========================================
+   2. RESET AND TYPOGRAPHY
+======================================== */
 
-/* =========================================================
-   2. RESET, TYPOGRAPHY VÀ CÁC THÀNH PHẦN CƠ BẢN
-   ========================================================= */
-
-/* Tính cả padding và border trong kích thước phần tử */
 * {
     box-sizing: border-box;
 }
 
-/* Cuộn mượt khi nhấn các liên kết nội trang */
 html {
     scroll-behavior: smooth;
 }
 
-/* Thiết lập giao diện chung cho toàn website */
 body {
     margin: 0;
     background-color: var(--page-bg);
     color: var(--text-color);
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.7;
 }
 
-/* Ảnh không vượt quá chiều rộng phần tử cha */
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* Màu và khoảng cách dòng cho các cấp tiêu đề */
 h1,
 h2,
 h3,
@@ -114,14 +103,12 @@ h4 {
     line-height: 1.3;
 }
 
-/* Tiêu đề chính của website */
 h1 {
     margin: 12px 0;
     font-size: clamp(1.8rem, 4vw, 2.4rem);
     text-align: center;
 }
 
-/* Tiêu đề các section */
 h2 {
     margin-top: 0;
     padding-bottom: 8px;
@@ -129,30 +116,27 @@ h2 {
     font-size: clamp(1.35rem, 3vw, 1.8rem);
 }
 
-/* Tiêu đề cấp ba */
 h3 {
     margin-top: 24px;
 }
 
-/* Nội dung văn bản sử dụng màu theo theme */
 p,
 li,
-dd {
+dd,
+dt,
+figcaption {
     color: var(--text-color);
 }
 
-/* Kiểu liên kết mặc định */
 a {
     color: var(--link-color);
     text-underline-offset: 0.18em;
 }
 
-/* Thay đổi màu liên kết khi rê chuột */
 a:hover {
     color: var(--accent-hover);
 }
 
-/* Đồng nhất font của các điều khiển biểu mẫu */
 button,
 input,
 select,
@@ -160,59 +144,45 @@ textarea {
     font: inherit;
 }
 
-/* Kiểu nút dùng chung */
 button,
 .button-link {
     display: inline-block;
     padding: 10px 18px;
-
     border: 1px solid var(--accent-color);
     border-radius: 6px;
-
     background-color: var(--accent-color);
     color: var(--button-text);
-
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Hiệu ứng hover cho nút */
 button:hover,
 .button-link:hover {
     background-color: var(--accent-hover);
     color: var(--button-text);
 }
 
-/* Viền nổi bật khi điều hướng bằng bàn phím */
 :focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 3px;
 }
 
+/* ========================================
+   3. HEADER AND NAVIGATION
+======================================== */
 
-/* =========================================================
-   3. HEADER, LOGO, NAVIGATION VÀ THEME TOGGLE
-   ========================================================= */
-
-/* Phần đầu trang */
 .site-header {
     padding: 20px;
     background-color: var(--surface-bg);
     border-bottom: 1px solid var(--border-color);
 }
 
-/*
- * Khu vực thương hiệu.
- * Các gradient tạo điểm nhấn trang trí nhưng vẫn giữ nền màu.
- */
 .company-brand {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-
     padding: 20px;
     text-align: center;
-
     background-color: var(--footer-bg);
     background-image:
         radial-gradient(
@@ -225,11 +195,9 @@ button:hover,
             rgba(137, 148, 107, 0.14) 0%,
             transparent 50%
         );
-
     border-radius: 10px;
 }
 
-/* Logo được căn giữa trong header */
 .logo {
     display: block;
     width: fit-content;
@@ -237,7 +205,6 @@ button:hover,
     margin: 0 auto;
 }
 
-/* Giữ logo đúng tỷ lệ, không kéo giãn hình */
 .logo img {
     width: 180px;
     max-width: 100%;
@@ -245,7 +212,6 @@ button:hover,
     object-fit: contain;
 }
 
-/* Slogan thay thế style inline trong HTML */
 .tagline {
     margin: 8px 0;
     color: var(--accent-color);
@@ -256,46 +222,40 @@ button:hover,
     text-align: center;
 }
 
-/* Phần mô tả thương hiệu */
 .brand-description {
     max-width: 700px;
     margin: 16px auto;
     text-align: center;
 }
 
-/* Menu chính và menu footer dùng chung cách bố trí */
+/* Navigation links shared by every page. */
 .nav-list,
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px 24px;
-
     margin: 16px 0 0;
     padding: 0;
-
     list-style: none;
 }
 
-/* Kiểu liên kết trong navigation */
 .nav-list a,
 .footer-nav a {
     display: inline-block;
     padding: 8px 10px;
     border-radius: 5px;
-
     color: var(--heading-color);
     font-weight: 700;
     text-decoration: none;
 }
 
-/* Hover menu */
 .nav-list a:hover,
 .footer-nav a:hover {
     text-decoration: underline;
 }
 
-/* Đánh dấu trang đang mở */
+/* Highlight the current page. */
 .nav-list a[aria-current="page"],
 .footer-nav a[aria-current="page"] {
     background-color: var(--footer-bg);
@@ -303,40 +263,32 @@ button:hover,
     text-decoration-thickness: 2px;
 }
 
-/* Khu vực checkbox đổi theme */
+/* Light/Dark theme checkbox. */
 .theme-control {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     margin: 12px auto;
     padding: 8px;
 }
 
-/* Checkbox có kích thước dễ thao tác */
 .theme-control input {
     width: 20px;
     height: 20px;
     accent-color: var(--accent-color);
+    cursor: pointer;
 }
 
-/* Nhãn checkbox */
 .theme-control label {
     color: var(--text-color);
     cursor: pointer;
 }
 
+/* ========================================
+   4. MAIN CONTENT AND SECTIONS
+======================================== */
 
-/* =========================================================
-   4. NỘI DUNG TRANG CHỦ VÀ ACCESSIBILITY
-   ========================================================= */
-
-/*
- * Nếu HTML sử dụng <main> trực tiếp mà chưa có class content,
- * các quy tắc này vẫn giữ layout trung tâm cho nội dung chính.
- */
-#main-content,
 .content {
     width: 100%;
     max-width: 1100px;
@@ -344,111 +296,87 @@ button:hover,
     padding: 24px 20px;
 }
 
-/* Các section trên trang chủ */
 .home-section {
     margin: 24px auto;
     padding: 24px;
-    border: 1px solid transparent;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
+    background-color: var(--card-bg);
 }
 
-/* Ảnh workspace tự co giãn theo kích thước màn hình */
-.workspace-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 24px auto;
-    border-radius: 12px;
+.home-section > :last-child {
+    margin-bottom: 0;
 }
 
-/* Nhấn mạnh liên kết đến Jobs page */
 .text-link {
     font-weight: 700;
 }
 
-/* Chú thích phụ cho chức năng tìm kiếm */
 .help-text {
     color: var(--muted-color);
     font-size: 0.9rem;
 }
 
-/*
- * Skip link mặc định nằm ngoài vùng nhìn.
- * Khi được focus bằng bàn phím, liên kết xuất hiện.
- */
+/* Homepage job search. */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-form label {
+    flex-basis: 100%;
+    font-weight: 700;
+}
+
+.search-form input {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.search-form button {
+    flex: 0 0 auto;
+}
+
+/* Keyboard skip link. */
 .skip-link {
     position: absolute;
     top: 8px;
     left: 8px;
     z-index: 1000;
-
     padding: 12px 16px;
     transform: translateY(-160%);
-
     border: 2px solid var(--focus-color);
     border-radius: 6px;
-
     background-color: var(--card-bg);
     color: var(--text-color);
 }
 
-/* Hiển thị skip link khi người dùng chuyển đến nó */
 .skip-link:focus {
     transform: translateY(0);
 }
 
+/* ========================================
+   5. TABLES AND IMAGES
+======================================== */
 
-/* =========================================================
-   5. SEARCH FORM
-   ========================================================= */
-
-/* Các thành phần tìm kiếm có thể xuống dòng */
-.search-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Ô nhập từ khóa */
-.search-form input {
-    flex: 1 1 220px;
-    min-width: 0;
-    max-width: 100%;
-
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-
-    background-color: var(--card-bg);
-    color: var(--text-color);
-}
-
-/* Màu chữ gợi ý trong ô tìm kiếm */
-.search-form input::placeholder {
-    color: var(--muted-color);
-    opacity: 1;
-}
-
-
-/* =========================================================
-   6. CAREER TABLE
-   ========================================================= */
-
-/* Cho phép bảng cuộn ngang khi màn hình quá hẹp */
 .table-wrapper {
     width: 100%;
     overflow-x: auto;
 }
 
-/* Bảng chiếm toàn bộ chiều rộng vùng chứa */
 .career-table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--card-bg);
 }
 
-/* Chú thích phía trên bảng */
 .career-table caption {
     padding: 10px;
     color: var(--text-color);
@@ -456,7 +384,6 @@ button:hover,
     text-align: center;
 }
 
-/* Ô dữ liệu và ô tiêu đề */
 .career-table th,
 .career-table td {
     padding: 12px;
@@ -465,50 +392,56 @@ button:hover,
     vertical-align: top;
 }
 
-/* Kiểu riêng cho tiêu đề cột */
 .career-table th {
     background-color: var(--footer-bg);
     color: var(--heading-color);
     text-align: center;
+    letter-spacing: 0.03em;
 }
 
-/* Tô màu xen kẽ các hàng chẵn */
 .career-table tbody tr:nth-child(even) {
     background-color: var(--row-alt-bg);
 }
 
-/* Highlight hàng khi rê chuột */
 .career-table tbody tr:hover {
     background-color: var(--row-hover-bg);
 }
 
+.workspace-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 24px auto;
+    border-radius: 12px;
+}
 
-/* =========================================================
-   7. APPLICATION FORM — apply.html
-   Giữ lại các class form từ stylesheet hiện tại.
-   ========================================================= */
+/* ========================================
+   6. APPLICATION FORM
+======================================== */
 
-/* Thẻ form chứa thông tin ứng tuyển */
 .application-form {
     width: 100%;
 }
 
-/* Khung biểu mẫu */
 .form-card {
     width: 100%;
     max-width: 650px;
-
     margin: 20px auto;
     padding: 22px 24px;
-
     border: 1px solid var(--border-color);
     border-left: 6px solid var(--accent-color);
     border-radius: 8px;
-
     background-color: var(--card-bg);
 }
 
-/* Nhãn và legend của form */
+.form-card > label,
+.form-card > input,
+.form-card > select,
+.form-card > textarea {
+    display: block;
+    width: 100%;
+}
+
 .form-card > label,
 .form-card legend {
     margin-bottom: 8px;
@@ -516,60 +449,44 @@ button:hover,
     font-weight: 700;
 }
 
-/* Nhãn dạng block khi nằm trực tiếp trong form-card */
-.form-card > label {
-    display: block;
-}
-
-/*
- * Các ô nhập nằm trực tiếp trong form-card.
- * Loại trừ checkbox và radio để không làm chúng rộng toàn bộ.
- */
-.form-card > input:not([type="checkbox"]):not([type="radio"]),
-.form-card > select,
-.form-card > textarea {
-    display: block;
-    width: 100%;
-}
-
-/* Kiểu chung cho các trường nhập liệu */
 .form-card input:not([type="checkbox"]):not([type="radio"]),
 .form-card select,
 .form-card textarea {
     max-width: 100%;
     margin-top: 6px;
     padding: 10px;
-
     border: 1px solid var(--border-color);
     border-radius: 5px;
-
     background-color: var(--card-bg);
     color: var(--text-color);
 }
 
-/* Giữ placeholder dễ đọc ở cả hai theme */
 .form-card input::placeholder,
 .form-card textarea::placeholder {
     color: var(--muted-color);
     opacity: 1;
 }
 
-/* Cho phép thay đổi chiều cao textarea */
 .form-card textarea {
     resize: vertical;
 }
 
-/* Nhóm radio hoặc checkbox */
+.form-card fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.form-card fieldset legend {
+    padding: 0 6px;
+}
+
 .choice-group {
     min-width: 0;
 }
 
-/* Khoảng cách cho legend của nhóm lựa chọn */
-.choice-group legend {
-    padding: 0 6px;
-}
-
-/* Mỗi lựa chọn hiển thị trên một hàng */
 .choice-item {
     display: flex;
     align-items: center;
@@ -577,7 +494,6 @@ button:hover,
     margin: 8px 0;
 }
 
-/* Kích thước checkbox và radio */
 .choice-item input[type="checkbox"],
 .choice-item input[type="radio"] {
     flex: 0 0 auto;
@@ -587,127 +503,115 @@ button:hover,
     accent-color: var(--accent-color);
 }
 
-/* Nhãn lựa chọn nằm cạnh checkbox/radio */
 .choice-item label {
     display: inline;
+    margin: 0;
     cursor: pointer;
 }
 
-/* Căn giữa các nút gửi và đặt lại form */
 .form-action {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-
-    width: 100%;
     margin: 28px auto;
 }
 
-/* Nút phụ, ví dụ nút Reset */
 .secondary-button {
     background-color: transparent;
     color: var(--link-color);
 }
 
-/* Hover cho nút phụ */
 .secondary-button:hover {
     background-color: var(--footer-bg);
     color: var(--text-color);
 }
 
+/* ========================================
+   7. JOBS PAGE
+======================================== */
 
-/* =========================================================
-   8. JOBS PAGE — jobs.html
-   ========================================================= */
-
-/* Giới hạn chiều rộng để mô tả công việc dễ đọc */
 .jobs-page .content {
     max-width: 900px;
 }
 
-/* Phần giới thiệu trang tuyển dụng */
 .jobs-page .intro {
-    padding-bottom: 8px;
+    padding: 24px;
 }
 
-/* Khung hướng dẫn ứng tuyển */
 .how-to-apply {
-    padding: 20px;
     border-left: 5px solid var(--accent-color);
     background-color: var(--surface-bg);
 }
 
-/* Mỗi vị trí tuyển dụng là một khung riêng */
 .jobs-page .job {
     margin: 24px 0;
     padding: 24px;
-
     border: 1px solid var(--border-color);
     border-radius: 8px;
-
     background-color: var(--card-bg);
     text-align: left;
 }
 
-/* Làm nổi bật mã tham chiếu công việc */
 .job-ref {
     font-family: Consolas, "Courier New", monospace;
     font-weight: 700;
     letter-spacing: 0.05em;
 }
 
-/* Căn lề danh sách trong mô tả công việc */
 .job ul,
 .job ol,
 .how-to-apply ol {
     padding-left: 24px;
 }
 
+/* ========================================
+   8. ABOUT PAGE
+======================================== */
 
-/* =========================================================
-   9. ABOUT PAGE — about.html
-   ========================================================= */
-
-/* Danh sách thông tin nhóm */
 .group-info-list {
+    padding-left: 24px;
     line-height: 1.8;
 }
 
-/* Khoảng cách giữa tên thành viên và thông tin */
+.group-info-list > li {
+    margin-bottom: 6px;
+}
+
+.group-info-list ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
 .member-list dt {
     margin-top: 20px;
     font-weight: 700;
 }
 
-/* Khoảng cách cho phần mô tả thành viên */
 .member-list dd {
     margin: 8px 0 20px;
 }
 
-/* Huy hiệu mã số thành viên */
+.member-list dd p {
+    line-height: 1.8;
+}
+
 .member-id {
     display: inline-block;
     margin-left: 8px;
     padding: 2px 7px;
-
     border: 1px solid var(--border-color);
     border-radius: 4px;
-
     background-color: var(--footer-bg);
     color: var(--text-color);
-
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
 }
 
-/* Khung ảnh nhóm */
 .team-figure {
     margin: 0;
     text-align: center;
 }
 
-/* Ảnh nhóm không vượt quá chiều rộng quy định */
 .team-photo {
     width: 100%;
     max-width: 600px;
@@ -716,76 +620,59 @@ button:hover,
     border-radius: 10px;
 }
 
-/* Chú thích bên dưới ảnh */
 .team-figure figcaption {
     margin-top: 10px;
     color: var(--muted-color);
     font-size: 0.95rem;
 }
 
+/* ========================================
+   9. FOOTER
+======================================== */
 
-/* =========================================================
-   10. FOOTER
-   ========================================================= */
-
-/* Dùng một nhóm quy tắc footer, tránh khai báo trùng lặp */
 .site-footer {
     margin-top: 32px;
     padding: 24px;
-
     border-top: 1px solid var(--border-color);
     background-color: var(--footer-bg);
     color: var(--text-color);
-
     text-align: center;
 }
 
-/* Khoảng cách giữa các đoạn trong footer */
 .site-footer p {
     margin: 10px 0;
 }
 
-/* Khoảng cách cho menu footer */
 .footer-nav {
     margin: 12px 0;
 }
 
-
-/* =========================================================
-   11. RESPONSIVE DESIGN
-   Các quy tắc dưới đây áp dụng cho màn hình rộng tối đa 600px.
-   ========================================================= */
+/* ========================================
+   10. RESPONSIVE AND ACCESSIBILITY
+======================================== */
 
 @media (max-width: 600px) {
-
-    /* Giảm khoảng trống của header */
     .site-header {
         padding: 12px;
     }
 
-    /* Giảm padding khu vực thương hiệu */
     .company-brand {
         padding: 16px 10px;
     }
 
-    /* Logo nhỏ hơn trên điện thoại */
     .logo img {
         width: 140px;
     }
 
-    /* Giảm padding nội dung chính */
-    #main-content,
     .content {
         padding: 12px;
     }
 
-    /* Thu gọn các section */
     .home-section {
         margin: 14px auto;
         padding: 14px;
     }
 
-    /* Menu có khoảng cách nhỏ hơn trên màn hình hẹp */
     .nav-list,
     .footer-nav {
         gap: 6px;
@@ -796,43 +683,30 @@ button:hover,
         padding: 8px;
     }
 
-    /* Form không chạm sát cạnh màn hình */
     .form-card {
         padding: 16px;
     }
 
-    /* Thu gọn ô bảng nhưng vẫn giữ khả năng cuộn */
     .career-table th,
     .career-table td {
         padding: 9px;
     }
 
-    /* Giảm padding của mỗi vị trí tuyển dụng */
-    .jobs-page .job {
+    .jobs-page .job,
+    .jobs-page .intro {
         padding: 16px;
     }
 
-    /* Search form chuyển sang dạng dọc để dễ sử dụng */
-    .search-form {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-form input,
     .search-form button {
         width: 100%;
     }
+
+    .member-id {
+        margin: 6px 0 0;
+    }
 }
 
-
-/* =========================================================
-   12. REDUCED MOTION
-   Hạn chế chuyển động nếu người dùng đã bật tùy chọn
-   giảm hiệu ứng động trong hệ điều hành.
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
