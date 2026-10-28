@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,126 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Xì Mi Village Studio, a creative digital agency specialising in web design and digital experiences.">
     <title>Xì Mi Village Studio | Home</title>
-
-    <!-- Sử dụng stylesheet chung cho toàn bộ website -->
     <link rel="stylesheet" href="styles.css">
     <style>
     main p {
         line-height: 1.8;
     }
-
     .career-table th {
         text-align: center;
         letter-spacing: 0.03em;
     }
 </style>
 </head>
-
 <body>
 
-    <!--
-        Skip link: cho phép người dùng bàn phím bỏ qua phần header
-        và chuyển thẳng đến nội dung chính.
-    -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header id="top" class="site-header">
-
         <div class="company-brand">
-
-            <!-- Logo  -->
             <a href="index.html" class="logo">
-                <img
-                    src="./images/logo.png"
-                    alt="Xì Mi Village Studio logo"
-                    width="180"
-                    height="180"
-                >
+                <img src="images/logo.png"
+                     alt="Xì Mi Village Studio logo"
+                     width="180" height="180">
             </a>
+
             <h1>Xì Mi Village Studio</h1>
-
-            <!-- Slogan -->
             <p class="tagline" style="color: #8a6248;">Small Village. Big Ideas.</p>
-
             <p class="brand-description">
                 We are a creative digital agency combining design,
                 technology and innovation to create meaningful digital
                 experiences for businesses and their audiences.
             </p>
-
         </div>
 
-        <!--nút chuyển theme-->
         <div class="theme-control">
             <input type="checkbox" id="theme-toggle">
             <label for="theme-toggle">Dark mode</label>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="apply.html">Apply</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
     </header>
 
+    <main id="main-content" class="content">
 
-    <main id="main-content">
-
-        <img
-            class="workspace-image"
-            src="./images/ximiworkspace.png"
-            alt="Workspace representing Xì Mi Village Studio"
-            width="800"
-            height="450"
-        >
+        <img class="workspace-image"
+             src="images/ximiworkspace.png"
+             alt="Workspace representing Xì Mi Village Studio"
+             width="800" height="450">
 
         <section class="home-section">
-
-            <h2 id="search-heading">Search for Jobs</h2>
+            <h2>Search for Jobs</h2>
 
             <form class="search-form" action="jobs.html" method="get">
-
                 <label for="search">Enter a job title or reference:</label>
-
-                <input
-                    type="search"
-                    id="search"
-                    name="search"
-                    placeholder="e.g. Web Developer or FE001"
-                >
-
+                <input type="search" id="search" name="search"
+                       placeholder="e.g. Web Developer or FE001">
                 <button type="submit">Search</button>
-
             </form>
 
             <p class="help-text">
                 Search sends your query to the Jobs page.
                 The page currently lists all available roles.
             </p>
-
         </section>
 
-        <!-- giới thiệu công ty -->
         <section class="home-section">
-
-            <h2 id="welcome-heading">Welcome to Xì Mi Village</h2>
+            <h2>Welcome to Xì Mi Village</h2>
 
             <p>
-                At Xì Mi Village Studio, we believe that effective digital
-                experiences begin with creative thinking and a clear
-                understanding of users' needs. Our team works across
-                digital design, web development and user experience to
-                turn ideas into practical solutions.
+                At Xì Mi Village Studio, we believe that effective
+                digital experiences begin with creative thinking and
+                a clear understanding of users' needs. Our team works
+                across digital design, web development and user
+                experience to turn ideas into practical solutions.
             </p>
 
             <p>
-                We are always looking for people who are passionate about
-                technology, design and collaboration.
-                Explore our job opportunities to find your next challenge.
+                We are always looking for people who are passionate
+                about technology, design and collaboration. Explore
+                our job opportunities to find your next challenge.
             </p>
 
             <p>
@@ -132,23 +98,16 @@
                     Explore our job opportunities
                 </a>
             </p>
-
         </section>
 
-        <!--table job-->
         <section class="home-section">
+            <h2>Our Career Areas</h2>
 
-            <h2 id="career-heading">Our Career Areas</h2>
-
-            <!-- Cho phép cuộn ngang bảng trên màn hình nhỏ -->
             <div class="table-wrapper">
-
                 <table class="career-table">
-
                     <caption>
                         Example career opportunities at Xì Mi Village Studio
                     </caption>
-
                     <thead>
                         <tr>
                             <th scope="col">Job Reference</th>
@@ -156,76 +115,57 @@
                             <th scope="col">Department</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
                             <td>FE001</td>
                             <td>Front-End Web Developer</td>
                             <td rowspan="2">Digital Experiences</td>
                         </tr>
-
                         <tr>
                             <td>UX002</td>
                             <td>UI/UX Designer</td>
                         </tr>
-
                         <tr>
                             <td colspan="3">
-                                More career opportunities are available on
-                                our <a href="jobs.html">Jobs page</a>.
+                                More opportunities are available on our
+                                <a href="jobs.html">Jobs page</a>.
                             </td>
                         </tr>
                     </tbody>
-
                 </table>
-
             </div>
-
         </section>
 
     </main>
 
-    <!-- Footer-->
     <footer class="site-footer">
         <p><strong>Xì Mi Village Studio</strong></p>
-        <nav>
+
+        <nav aria-label="Footer navigation">
             <ul class="footer-nav">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="apply.html">Apply</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
 
-        <!-- Jira --> <p>
-            Jira:
-            <a
-                href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Project Board</a>
+        <p>Jira:
+            <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary"
+               target="_blank" rel="noopener noreferrer">Project Board</a>
         </p>
 
-        <!--GitHub -->
-        <p>
-            GitHub:
-            <a
-                href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-"
-                target="_blank"
-                rel="noopener noreferrer"
-            >Source Code Repository</a>
+        <p>GitHub:
+            <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-"
+               target="_blank" rel="noopener noreferrer">Source Code Repository</a>
         </p>
 
-        <!-- mailto -->
-        <p>
-            Email:
+        <p>Email:
             <a href="mailto:langximi@gmail.com">langximi@gmail.com</a>
         </p>
+
         <p>&copy; 2026 Xì Mi Village Studio.</p>
-
-        <!-- move to the top -->
         <p><a href="#top">Back to top</a></p>
-
     </footer>
 
 </body>
