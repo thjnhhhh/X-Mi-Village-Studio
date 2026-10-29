@@ -3,20 +3,20 @@
  * Shared stylesheet for all four pages.
  *
  * Sections:
- * 1. Theme variables
- * 2. Reset and typography
- * 3. Header and navigation
- * 4. Main content and sections
- * 5. Tables and images
+ * 1. Themes
+ * 2. kiểu chữ, nút, ...
+ * 3. Header và navi
+ * 4. Main content và sections
+ * 5. bảng và ảnh
  * 6. Application form
  * 7. Jobs page
  * 8. About page
  * 9. Footer
- * 10. Responsive and accessibility
+ * 10. Responsive và accessibility
  */
 
 /* ========================================
-   1. THEME VARIABLES
+   1. THEME
 ======================================== */
 
 :root {
@@ -43,7 +43,7 @@
     --button-text: #ffffff;
 }
 
-/* Dark theme is activated by the checkbox on each page. */
+/* Dark theme */
 body:has(#theme-toggle:checked) {
     color-scheme: dark;
 
@@ -68,8 +68,21 @@ body:has(#theme-toggle:checked) {
     --button-text: #191714;
 }
 
+/* thêm background cho index */
+.home-page {
+    background-color: var(--page-bg);
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(118, 86, 63, 0.28) 2px, transparent 0),
+        linear-gradient(135deg,
+            rgba(184, 133, 95, 0.16) 0 25%,
+            transparent 25% 50%,
+            rgba(137, 148, 107, 0.16) 50% 75%,
+            transparent 75%);
+    background-size: 32px 32px, 128px 128px;
+}
+
 /* ========================================
-   2. RESET AND TYPOGRAPHY
+   2.
 ======================================== */
 
 * {
@@ -168,7 +181,7 @@ button:hover,
 }
 
 /* ========================================
-   3. HEADER AND NAVIGATION
+   3. HEADER VÀ NAVI
 ======================================== */
 
 .site-header {
@@ -228,7 +241,7 @@ button:hover,
     text-align: center;
 }
 
-/* Navigation links shared by every page. */
+/* Navi links các trang. */
 .nav-list,
 .footer-nav {
     display: flex;
@@ -255,7 +268,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* Highlight the current page. */
+/* Highlight page hiện tại */
 .nav-list a[aria-current="page"],
 .footer-nav a[aria-current="page"] {
     background-color: var(--footer-bg);
@@ -286,7 +299,7 @@ button:hover,
 }
 
 /* ========================================
-   4. MAIN CONTENT AND SECTIONS
+   4. MAIN CONTENT VÀ SECTIONS
 ======================================== */
 
 .content {
@@ -317,7 +330,7 @@ button:hover,
     font-size: 0.9rem;
 }
 
-/* Homepage job search. */
+/* tìm job ở homeoage. */
 .search-form {
     display: flex;
     flex-wrap: wrap;
@@ -363,7 +376,7 @@ button:hover,
 }
 
 /* ========================================
-   5. TABLES AND IMAGES
+   5. BẢNG VÀ HÌNH
 ======================================== */
 
 .table-wrapper {
