@@ -310,11 +310,15 @@ button:hover,
 }
 
 .home-section {
-    margin: 24px auto;
-    padding: 24px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: var(--card-bg);
+    margin: 0;
+    padding: 48px 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+}
+
+.home-section + .home-section {
+    border-top: 1px solid var(--border-color);
 }
 
 .home-section > :last-child {
@@ -355,6 +359,15 @@ button:hover,
 
 .search-form button {
     flex: 0 0 auto;
+}
+
+#first-nations {
+    margin: 24px 0;
+    padding: 40px 32px;
+    border: 0;
+    border-top: 4px solid var(--accent-color);
+    border-radius: 0;
+    background-color: var(--surface-bg);
 }
 
 /* Keyboard skip link. */
@@ -433,18 +446,19 @@ button:hover,
 ======================================== */
 
 .application-form {
-    width: 100%;
+    padding: 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
 }
 
 .form-card {
-    width: 100%;
-    max-width: 650px;
-    margin: 20px auto;
-    padding: 22px 24px;
-    border: 1px solid var(--border-color);
-    border-left: 6px solid var(--accent-color);
-    border-radius: 8px;
-    background-color: var(--card-bg);
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
 }
 
 .form-card > label,
@@ -549,7 +563,7 @@ button:hover,
 }
 
 .jobs-page .intro {
-    padding: 24px;
+    padding: 0 0 32px;
 }
 
 .how-to-apply {
@@ -558,12 +572,12 @@ button:hover,
 }
 
 .jobs-page .job {
-    margin: 24px 0;
-    padding: 24px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: var(--card-bg);
-    text-align: left;
+    margin: 0 0 48px;
+    padding: 24px 0 0;
+    border: 0;
+    border-top: 4px solid var(--heading-color);
+    border-radius: 0;
+    background: none;
 }
 
 .job-ref {
@@ -682,8 +696,11 @@ button:hover,
     }
 
     .home-section {
-        margin: 14px auto;
-        padding: 14px;
+        padding: 32px 0;
+    }
+
+    #first-nations {
+        padding: 24px 16px;
     }
 
     .nav-list,
@@ -716,6 +733,10 @@ button:hover,
 
     .member-id {
         margin: 6px 0 0;
+    }
+
+    .application-form {
+        padding: 20px 16px;
     }
 }
 
