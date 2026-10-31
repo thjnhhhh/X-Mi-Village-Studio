@@ -18,7 +18,7 @@
 /* ========================================
    1. THEME
 ======================================== */
-
+/* theme chính */
 :root {
     color-scheme: light;
 
@@ -43,7 +43,7 @@
     --button-text: #ffffff;
 }
 
-/* Dark theme */
+/* Dảk theme */
 body:has(#theme-toggle:checked) {
     color-scheme: dark;
 
@@ -68,7 +68,7 @@ body:has(#theme-toggle:checked) {
     --button-text: #191714;
 }
 
-/* thêm background cho index */
+/* thêm background ảnh xì mi cho index */
 .home-page {
     background-color: var(--page-bg);
     background-image:
@@ -79,7 +79,7 @@ body:has(#theme-toggle:checked) {
     background-attachment: fixed;
 }
 
-/* dảk mode background */
+/* dảk mode cho ảnh xì mu background */
 .home-page:has(#theme-toggle:checked) {
     background-image:
         linear-gradient(rgba(25, 23, 20, 0.9), rgba(25, 23, 20, 0.9)),
@@ -87,7 +87,7 @@ body:has(#theme-toggle:checked) {
 }
 
 /* ========================================
-   2.
+   2. mấy cái style chính
 ======================================== */
 
 * {
@@ -194,7 +194,7 @@ button:hover,
     background-color: var(--surface-bg);
     border-bottom: 1px solid var(--border-color);
 }
-
+/* header */
 .company-brand {
     position: relative;
     isolation: isolate;
@@ -246,7 +246,7 @@ button:hover,
     text-align: center;
 }
 
-/* Navi links các trang. */
+/* navi links các trang. */
 .nav-list,
 .footer-nav {
     display: flex;
@@ -273,7 +273,7 @@ button:hover,
     text-decoration: underline;
 }
 
-/* Highlight page hiện tại */
+/* highlight page hiện tại */
 .nav-list a[aria-current="page"],
 .footer-nav a[aria-current="page"] {
     background-color: var(--footer-bg);
@@ -281,7 +281,7 @@ button:hover,
     text-decoration-thickness: 2px;
 }
 
-/* Light/Dark theme checkbox. */
+/* light/dảk theme checkbox. */
 .theme-control {
     display: flex;
     align-items: center;
@@ -365,7 +365,7 @@ button:hover,
 .search-form button {
     flex: 0 0 auto;
 }
-
+/* acknowledgement ở index */
 #first-nations {
     margin: 24px 0;
     padding: 40px 32px;
@@ -375,7 +375,7 @@ button:hover,
     background-color: var(--surface-bg);
 }
 
-/* Keyboard skip link. */
+/* keyboard skip link. */
 .skip-link {
     position: absolute;
     top: 8px;
@@ -394,7 +394,7 @@ button:hover,
 }
 
 /* ========================================
-   5. BẢNG VÀ HÌNH
+   5. bẢNG vÀ hÌNH
 ======================================== */
 
 .table-wrapper {
@@ -447,7 +447,7 @@ button:hover,
 }
 
 /* ========================================
-   6. APPLICATION FORM
+   6. form apply
 ======================================== */
 
 .application-form {
@@ -560,7 +560,7 @@ button:hover,
 }
 
 /* ========================================
-   7. JOBS PAGE
+   7. jobs
 ======================================== */
 
 .jobs-page .content {
@@ -598,7 +598,7 @@ button:hover,
 }
 
 /* ========================================
-   8. ABOUT PAGE
+   8. about
 ======================================== */
 
 .group-info-list {
