@@ -1,6 +1,5 @@
 <?php
-// Shared site header. Set $currentPage before including this file.
-// Pages may optionally override $brandDescription before including it.
+// Shared site header.
 $currentPage = $currentPage ?? '';
 
 $brandDescription = $brandDescription
