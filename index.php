@@ -22,15 +22,6 @@ $brandDescription = 'We are a creative digital agency combining design, technolo
     <meta name="description" content="Discover Xì Mi Village Studio, a creative digital agency specialising in web design and digital experiences.">
     <title>Xì Mi Village Studio | Home</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    main p {
-        line-height: 1.8;
-    }
-    .career-table th {
-        text-align: center;
-        letter-spacing: 0.03em;
-    }
-</style>
 </head>
 <body class="home-page">
 
@@ -41,7 +32,7 @@ $brandDescription = 'We are a creative digital agency combining design, technolo
     <?php require __DIR__ . '/includes/header.php'; ?>
 
     <main id="main-content" class="content">
-        <h2 style="font-size: 360%;" class="hero_title">Join Làng Xì Mi</h2>
+        <h2 class="hero-title">Join Làng Xì Mi</h2>
         <img class="workspace-image"
              src="images/ximiworkspace.png"
              alt="Workspace representing Xì Mi Village Studio"
