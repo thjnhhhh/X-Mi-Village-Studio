@@ -1,4 +1,6 @@
-
+<?php
+$currentPage = 'about.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,35 +14,7 @@
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header id="top" class="site-header">
-        <div class="company-brand">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png"
-                     alt="Xì Mi Village Studio logo"
-                     width="180" height="180">
-            </a>
-            <h1>Xì Mi Village Studio</h1>
-            <p class="tagline">Small Village. Big Ideas.</p>
-            <p class="brand-description">
-                We combine design, technology and innovation to create
-                meaningful digital experiences for businesses and their audiences.
-            </p>
-        </div>
-
-        <div class="theme-control">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle">Dark mode</label>
-        </div>
-
-        <nav aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require __DIR__ . '/includes/header.php'; ?>
 
     <main id="main-content" class="content">
 
@@ -175,22 +149,7 @@
 
     </main>
 
-    <footer class="site-footer">
-        <p><strong>Xì Mi Village Studio</strong></p>
-        <nav aria-label="Footer navigation">
-            <ul class="footer-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-            </ul>
-        </nav>
-        <p>Jira: <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary" target="_blank" rel="noopener noreferrer">Project Board</a></p>
-        <p>GitHub: <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-" target="_blank" rel="noopener noreferrer">Source Code Repository</a></p>
-        <p>Email: <a href="mailto:langximi@gmail.com">langximi@gmail.com</a></p>
-        <p>&copy; 2026 Xì Mi Village Studio.</p>
-        <p><a href="#top">Back to top</a></p>
-    </footer>
+    <?php require __DIR__ . '/includes/footer.php'; ?>
 
 </body>
 </html>

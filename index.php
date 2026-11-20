@@ -1,7 +1,11 @@
+<?php
+$currentPage = 'index.php';
 
+$brandDescription = 'We are a creative digital agency combining design, technology and innovation to create meaningful digital experiences for businesses and their audiences.';
+?>
 <!DOCTYPE html>
 <!--
-    Xì Mi Village Studio - Home (index.html)
+    Xì Mi Village Studio - Home (index.php)
     Unit: COS10026 Web Technology Project
     Page developed by: Nguyễn Khang Thịnh
     Purpose: Landing page with company identity, job search box, career table and First Nations commitment.
@@ -34,37 +38,7 @@
 
     <!-- header: logo, name, slogan, nút đổi theme và main navi -->
      
-    <header id="top" class="site-header">
-        <div class="company-brand">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png"
-                     alt="Xì Mi Village Studio logo"
-                     width="180" height="180">
-            </a>
-
-            <h1>Xì Mi Village Studio</h1>
-            <p class="tagline" style="color: #8a6248;">Small Village. Big Ideas.</p>
-            <p class="brand-description">
-                We are a creative digital agency combining design,
-                technology and innovation to create meaningful digital
-                experiences for businesses and their audiences.
-            </p>
-        </div>
-
-        <div class="theme-control">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle">Dark mode</label>
-        </div>
-
-        <nav aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require __DIR__ . '/includes/header.php'; ?>
 
     <main id="main-content" class="content">
         <h2 style="font-size: 360%;" class="hero_title">Join Làng Xì Mi</h2>
@@ -76,7 +50,7 @@
         <section class="home-section">
             <h2>Search for Jobs</h2>
 
-            <form class="search-form" action="jobs.html" method="get">
+            <form class="search-form" action="jobs.php" method="get">
                 <label for="search">Enter a job title or reference:</label>
                 <input type="search" id="search" name="search"
                        placeholder="e.g. Web Developer or FE001">
@@ -107,7 +81,7 @@
             </p>
             <!-- link tới trang tìm job -->
             <p>
-                <a class="text-link" href="jobs.html">
+                <a class="text-link" href="jobs.php">
                     Explore our job opportunities
                 </a>
             </p>
@@ -141,7 +115,7 @@
                         <tr>
                             <td colspan="3">
                                 More opportunities are available on our
-                                <a href="jobs.html">Jobs page</a>.
+                                <a href="jobs.php">Jobs page</a>.
                             </td>
                         </tr>
                     </tbody>
@@ -182,34 +156,7 @@
         </section>
     </main>
     <!-- footeRRRRRRRRRR -->
-    <footer class="site-footer">
-        <p><strong>Xì Mi Village Studio</strong></p>
-        <!-- navi ở footeRRRR -->
-        <nav aria-label="Footer navigation">
-            <ul class="footer-nav">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-        <!-- hyperlink -->
-        <p>Jira:
-            <a href="https://phamnhatvuonghoaky.atlassian.net/jira/software/projects/VINGROUP/summary"
-               target="_blank" rel="noopener noreferrer">Project Board</a>
-        </p>
-
-        <p>GitHub:
-            <a href="https://github.com/thjnhhhh/Applied-Web-Project-Part-1-of-2-Group-Submission-"
-               target="_blank" rel="noopener noreferrer">Source Code Repository</a>
-        </p>
-        <p>Email:
-            <a href="mailto:langximi@gmail.com">langximi@gmail.com</a>
-        </p>
-
-        <p>&copy; 2026 Xì Mi Village Studio.</p>
-        <p><a href="#top">Back to top</a></p>
-    </footer>
+    <?php require __DIR__ . '/includes/footer.php'; ?>
 
 </body>
 </html>
