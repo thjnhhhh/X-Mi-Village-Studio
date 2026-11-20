@@ -1,38 +1,35 @@
 <?php
-// Shared primary navigation.
 $currentPage = $currentPage ?? '';
 ?>
 
 <nav aria-label="Main navigation">
     <ul class="nav-list">
-
         <li>
-            <a href="index.html"
-                <?php echo $currentPage === 'index.html' ? 'aria-current="page"' : ''; ?>>
+            <a href="index.php"
+                <?php echo $currentPage === 'index.php' ? 'aria-current="page"' : ''; ?>>
                 Home
             </a>
         </li>
 
         <li>
-            <a href="jobs.html"
-                <?php echo $currentPage === 'jobs.html' ? 'aria-current="page"' : ''; ?>>
+            <a href="jobs.php"
+                <?php echo $currentPage === 'jobs.php' ? 'aria-current="page"' : ''; ?>>
                 Jobs
             </a>
         </li>
 
         <li>
-            <a href="apply.html"
-                <?php echo $currentPage === 'apply.html' ? 'aria-current="page"' : ''; ?>>
+            <a href="apply.php"
+                <?php echo $currentPage === 'apply.php' ? 'aria-current="page"' : ''; ?>>
                 Apply
             </a>
         </li>
 
         <li>
-            <a href="about.html"
-                <?php echo $currentPage === 'about.html' ? 'aria-current="page"' : ''; ?>>
+            <a href="about.php"
+                <?php echo $currentPage === 'about.php' ? 'aria-current="page"' : ''; ?>>
                 About
             </a>
         </li>
-
     </ul>
 </nav>

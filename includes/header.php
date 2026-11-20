@@ -1,14 +1,12 @@
 <?php
-// Shared site header.
-$currentPage = $currentPage ?? '';
-
-$brandDescription = $brandDescription
-    ?? 'We combine design, technology and innovation to create meaningful digital experiences for businesses and their audiences.';
+if (!isset($brandDescription)) {
+    $brandDescription = 'We combine design, technology and innovation to create meaningful digital experiences for businesses and their audiences.';
+}
 ?>
 
-<header class="site-header" id="top">
+<header id="top" class="site-header">
     <div class="company-brand">
-        <a class="logo" href="index.html">
+        <a href="index.php" class="logo">
             <img src="images/logo.png"
                  alt="Xì Mi Village Studio logo"
                  width="180"
@@ -16,7 +14,6 @@ $brandDescription = $brandDescription
         </a>
 
         <h1>Xì Mi Village Studio</h1>
-
         <p class="tagline">Small Village. Big Ideas.</p>
 
         <p class="brand-description">
