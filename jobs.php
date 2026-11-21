@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/settings.php';
+
 $currentPage = 'jobs.php';
 ?>
 <!DOCTYPE html>

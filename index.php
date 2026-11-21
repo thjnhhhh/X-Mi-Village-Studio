@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/settings.php';
+
 $currentPage = 'index.php';
 
 $brandDescription = 'We are a creative digital agency combining design, technology and innovation to create meaningful digital experiences for businesses and their audiences.';

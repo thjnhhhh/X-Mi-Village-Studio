@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/settings.php';
+
 $currentPage = 'apply.php';
 ?>
 <!DOCTYPE html>
