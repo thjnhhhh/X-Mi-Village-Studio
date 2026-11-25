@@ -48,6 +48,8 @@ if (isset($application['date_of_birth'])) {
     [$day, $month, $year] = explode('/', $application['date_of_birth']);
     if (!checkdate((int) $month, (int) $day, (int) $year)) {
         $errors[] = 'Enter a valid date of birth.';
+    } elseif ("$year-$month-$day" > date('Y-m-d')) {
+        $errors[] = 'Date of birth cannot be in the future.';
     }
 }
 
