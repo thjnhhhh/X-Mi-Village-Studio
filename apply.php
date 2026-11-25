@@ -27,7 +27,8 @@ $currentPage = 'apply.php';
 
             <form class="application-form"
                   method="post"
-                  action="https://mercury.swin.edu.au/it000000/formtest.php">
+                  action="process_eoi.php"
+                  novalidate>
 
                 <div class="form-card">
                     <label for="job-reference">Job reference number *</label>
@@ -47,7 +48,7 @@ $currentPage = 'apply.php';
                            id="first-name"
                            name="first_name"
                            placeholder="Maximum 20 characters"
-                           pattern="[A-Za-z '\-]{1,20}"
+                           pattern="[\p{L}\p{M} '\-]{1,20}"
                            maxlength="20"
                            autocomplete="given-name"
                            required>
@@ -59,7 +60,7 @@ $currentPage = 'apply.php';
                            id="last-name"
                            name="last_name"
                            placeholder="Maximum 20 characters"
-                           pattern="[A-Za-z '\-]{1,20}"
+                           pattern="[\p{L}\p{M} '\-]{1,20}"
                            maxlength="20"
                            autocomplete="family-name"
                            required>
@@ -188,31 +189,31 @@ $currentPage = 'apply.php';
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-web"
-                                   name="skills[]" value="Web Design" required>
+                                   name="skills[]" value="Web Design" >
                             <label for="skill-web">Web Design</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-branding"
-                                   name="skills[]" value="Branding" required>
+                                   name="skills[]" value="Branding" >
                             <label for="skill-branding">Branding</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-content"
-                                   name="skills[]" value="Digital Content Services" required>
+                                   name="skills[]" value="Digital Content Services" >
                             <label for="skill-content">Digital Content Services</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-frontend"
-                                   name="skills[]" value="Front-End Development" required>
+                                   name="skills[]" value="Front-End Development" >
                             <label for="skill-frontend">Front-End Development</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-design"
-                                   name="skills[]" value="UI/UX Design" required>
+                                   name="skills[]" value="UI/UX Design" >
                             <label for="skill-design">UI/UX Design</label>
                         </div>
                     </fieldset>
