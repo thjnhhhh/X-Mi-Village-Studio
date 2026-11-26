@@ -18,7 +18,7 @@ $fields = [
     'state' => ['State', '/\A(?:VIC|NSW|QLD|NT|WA|SA|TAS|ACT)\z/'],
     'postcode' => ['Postcode', '/\A[0-9]{4}\z/'],
     'email' => ['Email', null],
-    'phone' => ['Phone number', '/\A[0-9]{8,12}\z/'],
+    'phone' => ['Phone number', '/\A\+?[0-9]{8,12}\z/'],
 ];
 
 $application = [];
@@ -100,7 +100,7 @@ if ($errors !== []) {
                 state VARCHAR(10) NOT NULL,
                 postcode VARCHAR(4) NOT NULL,
                 email VARCHAR(254) NOT NULL,
-                phone VARCHAR(12) NOT NULL,
+                phone VARCHAR(13) NOT NULL,
                 skills VARCHAR(255) DEFAULT '',
                 other_skills TEXT DEFAULT NULL,
                 status ENUM('New', 'Current', 'Final') NOT NULL DEFAULT 'New'
