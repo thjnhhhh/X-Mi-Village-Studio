@@ -2,6 +2,37 @@
 require_once __DIR__ . '/settings.php';
 
 $currentPage = 'jobs.php';
+
+$config = getDatabaseConfig();
+$conn = new mysqli(
+    $config['host'],
+    $config['username'],
+    $config['password'],
+    $config['database'],
+    (int) $config['port']
+);
+
+if ($conn->connect_error) {
+    die('Database connection failed.');
+}
+$conn->set_charset($config['charset']);
+
+$search = trim($_GET['search'] ?? '');
+
+if ($search !== '') {
+    $stmt = $conn->prepare(
+        'SELECT * FROM jobs
+         WHERE title LIKE ? OR description LIKE ? OR job_reference LIKE ?
+         ORDER BY job_reference'
+    );
+    $term = '%' . $search . '%';
+    $stmt->bind_param('sss', $term, $term, $term);
+    $stmt->execute();
+    $jobs = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+} else {
+    $result = $conn->query('SELECT * FROM jobs ORDER BY job_reference');
+    $jobs = $result->fetch_all(MYSQLI_ASSOC);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,86 +80,61 @@ $currentPage = 'jobs.php';
             </p>
         </aside>
 
-        <section class="job" id="fe001">
-            <h2>Front-End Web Developer</h2>
-            <p>Reference: <span class="job-ref">FE001</span></p>
-            <p>
-                Build responsive, accessible websites for our clients
-                using HTML5, CSS3 and modern front-end practices. Work
-                closely with designers to turn concepts into polished,
-                validated pages.
-            </p>
-            <p>
-                <strong>Salary:</strong> $85,000 to $100,000 plus superannuation.
-                <strong>Reports to:</strong> Head of Development.
-            </p>
+        <form method="get" action="jobs.php" class="job-search">
+            <label for="search">Search jobs by title, reference or description</label>
+            <input type="text" id="search" name="search" value="<?= htmlspecialchars($search) ?>">
+            <button type="submit">Search</button>
+        </form>
 
-            <h3>Key Responsibilities</h3>
-            <ul>
-                <li>Convert design mockups into semantic, standards-compliant HTML and CSS.</li>
-                <li>Ensure client websites follow WCAG accessibility guidelines.</li>
-                <li>Maintain shared component libraries and style guides.</li>
-                <li>Collaborate with designers and back-end developers in agile sprints.</li>
-            </ul>
+        <?php if (empty($jobs)): ?>
+            <p>No jobs match your search.</p>
+        <?php endif; ?>
 
-            <h3>Requirements</h3>
-            <h4>Essential</h4>
-            <ol>
-                <li>Strong knowledge of HTML5 and CSS3, including Flexbox and Grid.</li>
-                <li>Experience making websites accessible and validating code.</li>
-                <li>Working knowledge of Git and GitHub.</li>
-            </ol>
+        <?php foreach ($jobs as $job): ?>
+            <section class="job" id="<?= htmlspecialchars(strtolower($job['job_reference'])) ?>">
+                <h2><?= htmlspecialchars($job['title']) ?></h2>
+                <p>Reference: <span class="job-ref"><?= htmlspecialchars($job['job_reference']) ?></span></p>
+                <p><?= nl2br(htmlspecialchars($job['description'])) ?></p>
+                <p>
+                    <strong>Salary:</strong> <?= htmlspecialchars($job['salary']) ?>.
+                    <strong>Reports to:</strong> <?= htmlspecialchars($job['reports_to']) ?>.
+                </p>
 
-            <h4>Preferable</h4>
-            <ul>
-                <li>Experience with a JavaScript framework such as React or Vue.</li>
-                <li>Familiarity with Jira or other agile project tools.</li>
-            </ul>
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <?php foreach (explode(';', $job['responsibilities']) as $item): ?>
+                        <?php if (trim($item) !== ''): ?>
+                            <li><?= htmlspecialchars(trim($item)) ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
 
-            <p>
-                <a class="button-link" href="apply.php?job=FE001">Apply for FE001</a>
-            </p>
-        </section>
+                <h3>Requirements</h3>
+                <h4>Essential</h4>
+                <ol>
+                    <?php foreach (explode(';', $job['essential_requirements']) as $item): ?>
+                        <?php if (trim($item) !== ''): ?>
+                            <li><?= htmlspecialchars(trim($item)) ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ol>
 
-        <section class="job" id="ux002">
-            <h2>UI/UX Designer</h2>
-            <p>Reference: <span class="job-ref">UX002</span></p>
-            <p>
-                Shape the look, feel and usability of client websites
-                and digital products. Research user needs, create
-                wireframes and prototypes, and develop design systems.
-            </p>
-            <p>
-                <strong>Salary:</strong> $80,000 to $95,000 plus superannuation.
-                <strong>Reports to:</strong> Creative Director.
-            </p>
+                <h4>Preferable</h4>
+                <ul>
+                    <?php foreach (explode(';', $job['preferable_requirements']) as $item): ?>
+                        <?php if (trim($item) !== ''): ?>
+                            <li><?= htmlspecialchars(trim($item)) ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
 
-            <h3>Key Responsibilities</h3>
-            <ul>
-                <li>Create wireframes, prototypes and high-fidelity layouts.</li>
-                <li>Run user research and usability testing.</li>
-                <li>Maintain consistent colour and typography standards.</li>
-                <li>Present design concepts to clients and respond to feedback.</li>
-            </ul>
-
-            <h3>Requirements</h3>
-            <h4>Essential</h4>
-            <ol>
-                <li>A portfolio showing web or app design work.</li>
-                <li>Proficiency in Figma or Adobe XD.</li>
-                <li>An understanding of accessible colour contrast and layout.</li>
-            </ol>
-
-            <h4>Preferable</h4>
-            <ul>
-                <li>Basic HTML and CSS knowledge.</li>
-                <li>Experience designing for government or education clients.</li>
-            </ul>
-
-            <p>
-                <a class="button-link" href="apply.php?job=UX002">Apply for UX002</a>
-            </p>
-        </section>
+                <p>
+                    <a class="button-link" href="apply.php?job=<?= urlencode($job['job_reference']) ?>">
+                        Apply for <?= htmlspecialchars($job['job_reference']) ?>
+                    </a>
+                </p>
+            </section>
+        <?php endforeach; ?>
 
     </main>
 
