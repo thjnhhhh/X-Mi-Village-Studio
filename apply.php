@@ -189,31 +189,31 @@ $currentPage = 'apply.php';
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-web"
-                                   name="skills[]" value="Web Design" >
+                                   name="skills[]" value="Web Design" required>
                             <label for="skill-web">Web Design</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-branding"
-                                   name="skills[]" value="Branding" >
+                                   name="skills[]" value="Branding" required>
                             <label for="skill-branding">Branding</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-content"
-                                   name="skills[]" value="Digital Content Services" >
+                                   name="skills[]" value="Digital Content Services" required>
                             <label for="skill-content">Digital Content Services</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-frontend"
-                                   name="skills[]" value="Front-End Development" >
+                                   name="skills[]" value="Front-End Development" required>
                             <label for="skill-frontend">Front-End Development</label>
                         </div>
 
                         <div class="choice-item">
                             <input type="checkbox" id="skill-design"
-                                   name="skills[]" value="UI/UX Design" >
+                                   name="skills[]" value="UI/UX Design" required>
                             <label for="skill-design">UI/UX Design</label>
                         </div>
                     </fieldset>

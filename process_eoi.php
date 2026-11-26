@@ -61,9 +61,14 @@ $allowedSkills = [
     'UI/UX Design',
     ];
 $skills = $_POST['skills'] ?? [];
+
 if (!is_array($skills) || count($skills) !== count(array_filter($skills, 'is_string'))) {
     $errors[] = 'Select skills from the options on the form.';
     $skills = [];
+} elseif ($skills === []) {
+    $errors[] = 'Select at least one skill.';
+} elseif (array_diff($skills, $allowedSkills) !== []) {
+    $errors[] = 'Select skills from the options on the form.';
 }
 if (array_diff($skills, $allowedSkills) !== []) {
     $errors[] = 'Select skills from the options on the form.';
