@@ -224,7 +224,7 @@ $currentPage = 'apply.php';
                     <textarea id="other-skills"
                               name="other_skills"
                               rows="6"
-                              placeholder="Describe any additional skills or experience."></textarea>
+                              placeholder="Describe any additional skills & experience."></textarea>
                 </div>
 
                 <div class="form-action">
