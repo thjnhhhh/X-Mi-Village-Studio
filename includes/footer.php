@@ -57,7 +57,10 @@ $currentPage = $currentPage ?? '';
         Email:
         <a href="mailto:langximi@gmail.com">langximi@gmail.com</a>
     </p>
-
+    <p>
+        Manager login:
+        <a href="manage.php">Manager</a>
+    </p>
     <p>&copy; <?php echo date('Y'); ?> Xì Mi Village Studio.</p>
 
     <p><a href="#top">Back to top</a></p>

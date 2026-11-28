@@ -35,7 +35,7 @@ CREATE TABLE `eoi` (
   `state` varchar(10) NOT NULL,
   `postcode` varchar(4) NOT NULL,
   `email` varchar(254) NOT NULL,
-  `phone` varchar(12) NOT NULL,
+  `phone` varchar(13) NOT NULL,
   `skills` varchar(255) DEFAULT '',
   `other_skills` text DEFAULT NULL,
   `status` enum('New','Current','Final') NOT NULL DEFAULT 'New'
@@ -85,3 +85,12 @@ ALTER TABLE `eoi`
 
 ALTER TABLE `jobs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+-- Manager accounts
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL,
+    `password_hash` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
