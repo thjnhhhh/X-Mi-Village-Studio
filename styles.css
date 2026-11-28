@@ -770,3 +770,56 @@ button:hover,
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Manager login */
+.manager-login {
+    box-sizing: border-box;
+    display: grid;
+    min-height: 100vh;
+    padding: 24px 16px;
+    place-items: center;
+}
+
+.manager-login__card {
+    box-sizing: border-box;
+    width: min(100%, 27rem);
+    padding: clamp(20px, 5vw, 36px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--card-bg);
+    box-shadow: 0 12px 32px rgb(51 43 37 / 9%);
+}
+
+.manager-login__logo {
+    display: block;
+    width: 84px;
+    margin-inline: auto;
+}
+
+.manager-login__card h1 {
+    margin: 12px 0 24px;
+}
+
+.manager-login__form {
+    display: grid;
+    gap: 16px;
+}
+
+.manager-login__form .form-card > input {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.manager-login__form button {
+    width: 100%;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+.manager-login__error {
+    margin: 0 0 16px;
+    padding: 10px 12px;
+    border-inline-start: 3px solid var(--accent-color);
+    border-radius: 4px;
+    background-color: var(--surface-bg);
+}
