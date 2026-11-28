@@ -21,17 +21,17 @@ $search = trim($_GET['search'] ?? '');
 
 if ($search !== '') {
     $stmt = $conn->prepare(
-        'SELECT * FROM jobs
-         WHERE title LIKE ? OR description LIKE ? OR job_reference LIKE ?
-         ORDER BY job_reference'
-    );
-    $term = '%' . $search . '%';
-    $stmt->bind_param('sss', $term, $term, $term);
+    'SELECT * FROM jobs
+     WHERE title LIKE ? OR description LIKE ? OR job_reference LIKE ? OR salary LIKE ?
+     ORDER BY job_reference'
+);
+$term = '%' . $search . '%';
+$stmt->bind_param('ssss', $term, $term, $term, $term);
     $stmt->execute();
     $jobs = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 } else {
     $result = $conn->query('SELECT * FROM jobs ORDER BY job_reference');
-    $jobs = $result->fetch_all(MYSQLI_ASSOC);
+        $jobs = $result->fetch_all(MYSQLI_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ if ($search !== '') {
         </aside>
 
         <form method="get" action="jobs.php" class="job-search">
-            <label for="search">Search jobs by title, reference or description</label>
+            <label for="search">Search jobs by title, reference, description or salary</label>
             <input type="text" id="search" name="search" value="<?= htmlspecialchars($search) ?>">
             <button type="submit">Search</button>
         </form>
